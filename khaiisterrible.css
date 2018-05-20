@@ -1,0 +1,166 @@
+/*Thanks alot Alexander*/
+
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash|Audiowide|Arima+Madurai|Special+Elite');
+
+body{
+  background-image: url("https://s3.envato.com/files/207961648/preview.jpg");
+  overflow-x: hidden;
+  overflow-y: hidden;  
+}
+
+.gameSpace{
+  margin-top: 25px;  
+  padding: 14px 0px 10px 0px;  
+  background-image: url("https://housemix.com.ua/images/stories/virtuemart/product/broken_white_lappato_pol_859909.jpg");  
+}
+
+svg{
+  cursor:pointer;
+}
+
+h1{
+  font-family: Ravi Prakash;
+  color:#0F52BA;
+  margin-left: 30%;
+  margin-right: 30%;  
+  background-image: url("https://housemix.com.ua/images/stories/virtuemart/product/broken_white_lappato_pol_859909.jpg");  
+}
+
+h2{
+  font-family: Ravi Prakash;
+  font-size: 20px; 
+  margin-bottom: 0px;  
+}
+
+input{
+  display: inline;
+  width: 150px;  
+  border-right: solid blue 2px;
+  background: #eef7fa;
+  text-align: center;
+  font-family: Merienda;
+}
+
+.symbol{  
+  float: left;  
+  object-fit: cover;
+  height: 50px;
+  width: 50px;    
+  margin-left: 10px;
+  margin-bottom: 10px;  
+  cursor: pointer;  
+}
+
+.symbol img{
+  height: 100%;    
+}
+
+.inactive{
+  border: 1px solid black;  
+}
+
+.active1{
+  border: 2px solid red;  
+}
+
+.active2{
+  border: 2px solid blue;  
+}
+
+#canvasSpace{
+  display: inline;  
+}
+
+#symbolSpace{
+  display: none;  
+}
+
+#tutorialSpace{
+  width: 250px;
+  height: 400px;  
+  display: none; 
+  position: absolute;
+  z-index: 9;
+  background-color: lightgoldenrodyellow;
+  border: 3px solid white;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialSpaceHeader{  
+  padding: 10px;  
+  width: 75%;
+  float: left;  
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  text-align: center;
+  font-family: Audiowide;
+}
+
+#deleteButton{
+  padding: 10px;
+  width: 25%;  
+  float: left;  
+  cursor: pointer;  
+  z-index: 10;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-family: Audiowide;
+}
+
+#tutorialText{
+  padding: 10px;  
+  margin-top: 20px;
+  font-family: Arima Madurai;
+  font-size: 110%;  
+}
+
+button{
+  margin-right: 5px;
+  padding-right: 5px;
+  padding-left: 5px;  
+  background-color: beige;
+  font-family: Special Elite;
+  color: purple; 
+  border-color: purple;  
+}
+
+.arrow{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left{
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.nextButton{ 
+  border: none;
+  background-color: rgba(0, 0, 0, 0);  
+  color: black;  
+  float: right;  
+}
+
+.nextButton:hover{ 
+  text-decoration: underline;  
+}
+
+*{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

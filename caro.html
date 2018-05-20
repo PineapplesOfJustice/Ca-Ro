@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="utf-8">
+    <title>Caro</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="khaiisterrible.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="khaiisterrible.css">
+  </head>
+  <body>
+    <div class="container">  
+      <h1><u><i><center>Ca-Ro</center></i></u></h1>
+      <div class="row gameSpace" id="game" style="display: none;">
+        <div class="col-md-3">
+          <div class="row" style="margin-left: 12px; margin-right: 12px;">
+            <h2>Name: <input id="player1Name" onfocus="eraseInput('player1Name')" onblur="updateName('player1')"></h2>
+            <div class="col-md-5">
+              <div class="symbol" id="symbol1Div" onclick="displaySymbolSpace()"> 
+                <img id="symbol1" style="margin-left: 0px;" src="Images/X.png">  
+              </div> 
+            </div>  
+            <div class="col-md-7">
+              <h2 id="score1">Score: </h2>  
+            </div>  
+          </div><br>
+          <div class="row" style="margin-left: 12px; margin-right: 12px;">
+            <h2>Name: <input id="player2Name" onfocus="eraseInput('player2Name')" onblur="updateName('player2')"></h2>
+            <div class="col-md-5">
+              <div class="symbol" id="symbol2Div" onclick="displaySymbolSpace()">
+                <img id="symbol2" style="margin-left: 0px;" src="Images/O.png">  
+              </div>
+            </div>  
+            <div class="col-md-7">
+              <h2 id="score2">Score: </h2>
+            </div>  
+          </div><br>
+          <div class="row" style="margin-left: 12px; margin-right: 12px;">
+              <h2 id="turnSpace">Turn: 0</h2>
+          </div><br> 
+          <button id="modeButton" onclick="removeSymbol()">Undo</button>
+          <button id="restartButton" onclick="restart()">Restart</button>
+          <button id="tutorialButton" onclick="displayTutorialAgain()">Tutorial</button>
+        </div>  
+        <div id="canvasSpace" class="col-md-9">
+          <svg id="canvas" width="100%" viewBox="-50 -25 100 50"></svg>
+        </div>
+        <div id="symbolSpace">
+          <div id="symbolSquare1" class="col-md-4">
+          </div>   
+          <div id="symbolSquare2" class="col-md-4">
+          </div>
+        </div>    
+      </div>
+
+      <div id="openingBox" class="row gameSpace">  
+        <div class="col-md-3">
+          <h2>Name: <input type="text" id="name1" onfocus="eraseInput('name1')" maxlength = "10" value="Player 1"></h2>
+          <h2>Name: <input type="text" id="name2" onfocus="eraseInput('name2')" maxlength = "10" value="Player 2"></h2><br>
+          <h2>Column: <input type="number" id="colBox" onfocus="eraseInput('colBox')" maxlength = "2" value="39"></h2>
+          <h2>Row: <input type="number" id="rowBox" onfocus="eraseInput('rowBox')" maxlength = "2" value="39"></h2><br><br>
+          <button id="BasicButton" onclick="changeGameMode('Basic')" style="display: none;">Basic</button>
+          <button onclick="startGame()">Start Game</button>  
+          <button id="Tetris-StyleButton" onclick="changeGameMode('Tetris-Style')">Tetris-Style</button>
+        </div>
+        <div id="symbolBox1" class="col-md-4">
+        </div>   
+        <div id="symbolBox2" class="col-md-4">
+        </div>    
+      </div>
+
+      <div id="tutorialSpace">    
+        <!--Include a header DIV with the same name as the draggable DIV, followed by "header":-->
+        <div id="tutorialSpaceHeader">Move</div>
+        <div id="deleteButton" onclick="hideTutorialSpace()">X</div>
+        <div id="tutorialText">
+          <h2><u>Background</u></h2><br>  
+          <p>&emsp; This game is Caro. A game native to graph paper. The main objective is the first to get 5-in-a-row. Very similar to Tic-Tac-Toe, but more open, possiblity wise. Naturally, it is 2 players game. I hope you have fun because I did, when I was young.</p>      
+          <button id="nextButton" onclick="displayNextSlide()">Right arrow: <i class="arrow right"></i></button>
+        </div>    
+      </div>
+    
+    </div>
+    <script src="javascript v.1.1/Main.js"></script>
+  </body>
+</html>
