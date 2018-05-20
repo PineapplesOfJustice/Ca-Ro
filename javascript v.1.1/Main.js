@@ -49,7 +49,7 @@ function changeGameMode(subject){
 
 function startGame(){  
   document.getElementById("game").setAttribute("style", "display: inline;");
-  document.getElementById("game").setAttribute("style", "background-image: url('https://housemix.com.ua/images/stories/virtuemart/product/broken_white_lappato_pol_859909.jpg');");
+  document.getElementById("game").setAttribute("style", "background-image: url('Images/WhiteBackground.jpg');");
   document.getElementById("canvas").addEventListener('mouseleave', hoverEffects);
   //document.getElementById("openingBox").setAttribute("style", "display: none;"); 
   if(Number(document.getElementById("name1").value) != 0){player[1].name = document.getElementById("name1").value;}

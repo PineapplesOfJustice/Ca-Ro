@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ravi+Prakash|Audiowide|Arima+Madurai|Special+Elite');
 
 body{
-  background-image: url("https://s3.envato.com/files/207961648/preview.jpg");
+  background-image: url("Images/BoardBackground.jpg");
   overflow-x: hidden;
   overflow-y: hidden;  
 }
@@ -11,7 +11,7 @@ body{
 .gameSpace{
   margin-top: 25px;  
   padding: 14px 0px 10px 0px;  
-  background-image: url("https://housemix.com.ua/images/stories/virtuemart/product/broken_white_lappato_pol_859909.jpg");  
+  background-image: url("Images/WhiteBackground.jpg");  
 }
 
 svg{
@@ -23,7 +23,7 @@ h1{
   color:#0F52BA;
   margin-left: 30%;
   margin-right: 30%;  
-  background-image: url("https://housemix.com.ua/images/stories/virtuemart/product/broken_white_lappato_pol_859909.jpg");  
+  background-image: url("Images/WhiteBackground.jpg");  
 }
 
 h2{
