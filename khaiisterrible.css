@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ravi+Prakash|Audiowide|Arima+Madurai|Special+Elite');
 
 body{
-  background-image: url("Images/BoardBackground.jpg");
+  background-image: url("Images/Background/Board Background.jpg");
   overflow-x: hidden;
   overflow-y: hidden;  
 }
@@ -11,7 +11,7 @@ body{
 .gameSpace{
   margin-top: 25px;  
   padding: 14px 0px 10px 0px;  
-  background-image: url("Images/WhiteBackground.jpg");  
+  background-image: url("Images/Background/White Background.jpg");  
 }
 
 svg{
@@ -23,7 +23,7 @@ h1{
   color:#0F52BA;
   margin-left: 30%;
   margin-right: 30%;  
-  background-image: url("Images/WhiteBackground.jpg");  
+  background-image: url("Images/Background/White Background.jpg");  
 }
 
 h2{

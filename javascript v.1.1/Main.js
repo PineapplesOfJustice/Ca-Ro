@@ -1,8 +1,8 @@
 var namespace = "http://www.w3.org/2000/svg";
 
 var player = ["Game Undefined",
-              {name: "Player 1", score: 0, symbol: "Images/X.png",},
-              {name: "Player 2", score: 0, symbol: "Images/O.png",},];
+              {name: "Player 1", score: 0, symbol: "Images/Symbol/X.png",},
+              {name: "Player 2", score: 0, symbol: "Images/Symbol/O.png",},];
 var playerTurn = "player1";
 var gameTurn = 0;
 
@@ -10,25 +10,25 @@ var symbol = [];
 var symbolId;
 
 var symbolOptions = [undefined,
-                 "Images/X.png",
-                 "Images/O.png",
-                 "Images/Pineapple.png",
-                 "Images/Pokeball.png",
-                 "Images/Yoshi Egg.png",
-                 "Images/Bomb.png",
-                 "Images/Heart Container.png",
-                 "Images/Pikachu.png",
-                 "Images/Master Sword.png",
-                 "Images/Penguin.png",
-                 "Images/Earth.png",
-                 "Images/Okami Blossom.png",
-                 "Images/T-rex.png",
-                 "Images/Celia.png",
-                 "Images/Donkey Kong.png",
-                 "Images/Kirby.png",
-                 "Images/Link.png",
-                 "Images/Mario.png",
-                 "Images/Luigi.png",];
+                 "X.png",
+                 "O.png",
+                 "Pineapple.png",
+                 "Pokeball.png",
+                 "Yoshi Egg.png",
+                 "Bomb.png",
+                 "Heart Container.png",
+                 "Pikachu.png",
+                 "Master Sword.png",
+                 "Penguin.png",
+                 "Earth.png",
+                 "Okami Blossom.png",
+                 "T-rex.png",
+                 "Celia.png",
+                 "Donkey Kong.png",
+                 "Kirby.png",
+                 "Link.png",
+                 "Mario.png",
+                 "Luigi.png",];
 
 // box = (2box - 1)
 var boxX = 20; // Actually 39
@@ -49,7 +49,7 @@ function changeGameMode(subject){
 
 function startGame(){  
   document.getElementById("game").setAttribute("style", "display: inline;");
-  document.getElementById("game").setAttribute("style", "background-image: url('Images/WhiteBackground.jpg');");
+  document.getElementById("game").setAttribute("style", "background-image: url('Images/Background/White Background.jpg');");
   document.getElementById("canvas").addEventListener('mouseleave', hoverEffects);
   //document.getElementById("openingBox").setAttribute("style", "display: none;"); 
   if(Number(document.getElementById("name1").value) != 0){player[1].name = document.getElementById("name1").value;}
@@ -649,10 +649,10 @@ displaySymbols("Box", 2);
 function displaySymbols(subject, option){  
   for(var i=1; i<symbolOptions.length; i++){ 
     if(i == curSymbol[option]){
-      document.getElementById("symbol" + subject + option).innerHTML += "<center><div class='symbol active" + option + "' id='option" + option + "_" + i + "' onclick='updateSymbol(" + option + ", " + i + ")'><img id='option" + option + "_" + i + "Image' src='" + symbolOptions[i].replace('"', "") + "'></div></center>";  
+      document.getElementById("symbol" + subject + option).innerHTML += "<center><div class='symbol active" + option + "' id='option" + option + "_" + i + "' onclick='updateSymbol(" + option + ", " + i + ")'><img id='option" + option + "_" + i + "Image' src='Images/Symbol/" + symbolOptions[i].replace('"', "") + "'></div></center>";  
     }
     else{ 
-      document.getElementById("symbol" + subject + option).innerHTML += "<center><div class='symbol inactive' id='option" + option + "_" + i + "' onclick='updateSymbol(" + option + ", " + i + ")'><img id='option" + option + "_" + i + "Image' src='" + symbolOptions[i].replace('"', "") + "'></div></center>";  
+      document.getElementById("symbol" + subject + option).innerHTML += "<center><div class='symbol inactive' id='option" + option + "_" + i + "' onclick='updateSymbol(" + option + ", " + i + ")'><img id='option" + option + "_" + i + "Image' src='Images/Symbol/" + symbolOptions[i].replace('"', "") + "'></div></center>";  
     }
   }
 }
@@ -707,7 +707,7 @@ canvas.setAttribute("viewBox", (centerX-(width*scaleFactor/2)) + " " + (centerY-
 
 var centerLocatorX = 20;
 var centerLocatorY = 10;
-var centerLocator = makeImage("Images/+.png", centerX-(centerLocatorX*scaleFactor/2), centerY-(centerLocatorY*scaleFactor/2), centerLocatorX*scaleFactor, centerLocatorY*scaleFactor, 1);
+var centerLocator = makeImage("Images/Scroll Icon/+.png", centerX-(centerLocatorX*scaleFactor/2), centerY-(centerLocatorY*scaleFactor/2), centerLocatorX*scaleFactor, centerLocatorY*scaleFactor, 1);
 
 document.addEventListener('keyup', keyRelease); // Record which keys are not pressed.
 function keyRelease(event){ 
@@ -768,7 +768,7 @@ function scrollViewBox(){
       centerLocator.remove();  
     }
     if(keys[65] || keys[37] || keys[68] || keys[39] || keys[87] || keys[38] || keys[83] || keys[40] || keys[90] || keys[88]){
-      centerLocator = makeImage("Images/+.png", centerX-(centerLocatorX*scaleFactor/2), centerY-(centerLocatorY*scaleFactor/2), centerLocatorX*scaleFactor, centerLocatorY*scaleFactor, 1);
+      centerLocator = makeImage("Images/Scroll Icon/+.png", centerX-(centerLocatorX*scaleFactor/2), centerY-(centerLocatorY*scaleFactor/2), centerLocatorX*scaleFactor, centerLocatorY*scaleFactor, 1);
     }
     
 	canvas.setAttribute("viewBox", (centerX-(width*scaleFactor/2)) + " " + (centerY-(height*scaleFactor/2)) + " " + (width*scaleFactor) + " " + (height*scaleFactor));
