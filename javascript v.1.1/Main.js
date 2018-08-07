@@ -391,8 +391,8 @@ function tetrisTime(){
   document.getElementById("symbol" + symbolId).remove();
   document.getElementById("box" + symbolId).classList = "neutral";
 }
-// This is to Delete Symbol
 
+// This is to Delete Symbol
 function removeSymbol(){
   if(symbol.length > 0){    
     if(playerTurn == "player1"){playerTurn = "player2";}   
