@@ -62,9 +62,11 @@ function startGame(){
   document.getElementById("symbol2").setAttribute("src", player[2].symbol);
   boxX = Math.abs(Number(document.getElementById("rowBox").value))/2;
   if(boxX == 0){boxX = 20}
+  else if(boxX < 2.5){boxX = 2.5}
   else if(boxX > 20){boxX = 20}  
   boxY = Math.abs(Number(document.getElementById("colBox").value))/2;   
   if(boxY == 0){boxY = 20}  
+  else if(boxY < 2.5){boxY = 2.5}
   else if(boxY > 20){boxY = 20}
     
   scrollViewBox(); // Call the function that move the Canvas's viewBox.
@@ -92,12 +94,13 @@ function startGame(){
     displayTutorialAgain();  
   }
   //document.body.innerHTML += "<script data-brackets-id='71' src='javascript v.1.1/" + gameMode + ".js'></script>";  
+  hoverSymbol = makeImage(player[playerTurn.replace("player", "")].symbol, (Math.floor(mouseX/boxSize)*boxSize), (Math.floor(mouseY/boxSize)*boxSize), boxSize, boxSize, 1);
 }
 
 var mouseX = 0;
 var mouseY = 0;
 var hoverOpacity = 0.3;
-var hoverSymbol = makeImage(player[playerTurn.replace("player", "")].symbol, (Math.floor(mouseX/boxSize)*boxSize), (Math.floor(mouseY/boxSize)*boxSize), boxSize, boxSize, 1);
+var hoverSymbol /*= makeImage(player[playerTurn.replace("player", "")].symbol, (Math.floor(mouseX/boxSize)*boxSize), (Math.floor(mouseY/boxSize)*boxSize), boxSize, boxSize, 1)*/;
 
 function hoverEffects(event){
   var pt = canvas.createSVGPoint()
