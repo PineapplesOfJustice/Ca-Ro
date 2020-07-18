@@ -8,20 +8,11 @@ var gameTurn = 0;
 
 var symbol = [];
 
-symbolOptions = [undefined,
+var symbolOptions = [undefined,
                  "Images/X.png",
                  "Images/O.png",
-                 "Images/Pineapple.png",
-                 "Images/Pokeball.png",
-                 "Images/Yoshi Egg.png",
-                 "Images/Bomb.png",
-                 "Images/Heart Container.png",
-                 "Images/Pikachu.png",
-                 "Images/Master Sword.png",
-                 "Images/Penguin.png",
-                 "Images/Earth.png",
-                 "Images/Okami Blossom.png",
-                 "Images/T-rex.png",];
+                 "Images/Square.png",
+                 "Images/Triangle.png",];
 
 // box = (2box - 1)
 var boxX = 20; // Actually 39

@@ -12,23 +12,8 @@ var symbolId;
 var symbolOptions = [undefined,
                  "X.png",
                  "O.png",
-                 "Pineapple.png",
-                 "Pokeball.png",
-                 "Yoshi Egg.png",
-                 "Bomb.png",
-                 "Heart Container.png",
-                 "Pikachu.png",
-                 "Master Sword.png",
-                 "Penguin.png",
-                 "Earth.png",
-                 "Okami Blossom.png",
-                 "T-rex.png",
-                 "Celia.png",
-                 "Donkey Kong.png",
-                 "Kirby.png",
-                 "Link.png",
-                 "Mario.png",
-                 "Luigi.png",];
+                 "Square.png",
+                 "Triangle.png",];
 
 // box = (2box - 1)
 var boxX = 20; // Actually 39
